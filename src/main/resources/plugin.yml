@@ -1,0 +1,36 @@
+name: PhantomToggle
+version: ${project.version}
+main: net.deathnotedevs.phantomtoggle.PhantomToggle
+api-version: 1.16
+load: STARTUP
+authors: [ DeathNoteDevs ]
+description: Give your players the option to disable those pesky phantoms
+commands:
+  PhantomToggle:
+    description: PhantomToggle commands
+    usage: /<command> <reload|clear>
+    permission: phantomtoggle.admin
+  NoPhantom:
+      description: PhantomToggle commands
+      usage: /<command>
+      permission: phantomtoggle.toggle
+permissions:
+  phantomtoggle.toggle:
+    description: use the phantomtoggle command
+    default: false
+    children:
+      - drsleep.admin
+      - op
+  phantomtoggle.clear:
+    description: clears the phantomtoggle list
+    default: op
+    children:
+      - drsleep.admin
+  phantomtoggle.reload:
+    description: reloads PhantomToggle
+    default: op
+    children:
+      - drsleep.admin
+  phantomtoggle.admin:
+    description: use the phantomtoggle commands
+    default: op

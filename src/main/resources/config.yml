@@ -1,0 +1,5 @@
+World: 'world'
+NoPermsError: '&cError: no permission.'
+NoPhantomClear: '&6The following §c%count% &6players have had phantoms re enabled:&c'
+RemovedFromNoPhantoms: '&6You have enabled phantoms.'
+AddedToNoPhantoms: '&6You have disabledphantoms.'
