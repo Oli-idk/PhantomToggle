@@ -19,18 +19,18 @@ permissions:
     description: use the phantomtoggle command
     default: false
     children:
-      - drsleep.admin
+      - nophantom.admin
       - op
   phantomtoggle.clear:
     description: clears the phantomtoggle list
     default: op
     children:
-      - drsleep.admin
+      - nophantom.admin
   phantomtoggle.reload:
     description: reloads PhantomToggle
     default: op
     children:
-      - drsleep.admin
+      - nophantom.admin
   phantomtoggle.admin:
     description: use the phantomtoggle commands
     default: op
