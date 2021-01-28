@@ -12,12 +12,12 @@ import java.util.Set;
 import java.util.UUID;
 
 public class CommandPhantomToggle implements CommandExecutor {
-    Set<UUID> nosleep;
+    Set<UUID> NoPhantom;
 
     ConfigManager configManager;
 
     public CommandPhantomToggle(ConfigManager configManager) {
-        this.nosleep = PhantomToggle.NoPhantom;
+        this.NoPhantom = PhantomToggle.NoPhantom;
         this.configManager = configManager;
     }
 
@@ -39,9 +39,9 @@ public class CommandPhantomToggle implements CommandExecutor {
                 sender.sendMessage(configManager.get().getString("NoPerms").replace("&", "§"));
                 return true;
             }
-            int count = nosleep.size();
+            int count = NoPhantom.size();
             String names = configManager.get().getString("NoPhantomClear").replace("&", "§").replace("%count%", Integer.toString(count));
-            Iterator<UUID> iterator = nosleep.iterator();
+            Iterator<UUID> iterator = NoPhantom.iterator();
             while (iterator.hasNext()) {
                 Player player = Bukkit.getPlayer(iterator.next());
                 iterator.remove();

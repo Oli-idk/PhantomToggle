@@ -27,6 +27,7 @@ public final class PhantomToggle extends JavaPlugin {
 
         getCommand("phantomtoggle").setExecutor(new CommandPhantomToggle(configManager));
         getCommand("nophantom").setExecutor(new CommandNoPhantom(configManager));
+        getCommand("gibphantom").setExecutor(new CommandGivePhantom());
         getServer().getPluginManager().registerEvents(new EventLogout(), this);
 
         BukkitScheduler scheduler = getServer().getScheduler();

@@ -14,6 +14,10 @@ commands:
       description: PhantomToggle commands
       usage: /<command>
       permission: phantomtoggle.toggle
+  GibPhantom:
+    description: GibPhantom
+    usage: /<command>
+    permission: phantomtoggle.admin
 permissions:
   phantomtoggle.toggle:
     description: use the phantomtoggle command

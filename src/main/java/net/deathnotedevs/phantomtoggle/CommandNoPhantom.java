@@ -1,6 +1,7 @@
 package net.deathnotedevs.phantomtoggle;
 
 import net.deathnotedevs.phantomtoggle.configuration.ConfigManager;
+import org.bukkit.Statistic;
 import org.bukkit.World;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -37,6 +38,7 @@ public class CommandNoPhantom implements CommandExecutor {
             }
             NoPhantom.add(player.getUniqueId());
             player.sendMessage(configManager.get().getString("AddedToNoPhantoms").replace("&", "§"));
+            player.setStatistic(Statistic.TIME_SINCE_REST, 0);
             return true;
         }
     }
